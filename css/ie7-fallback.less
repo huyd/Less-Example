@@ -1,0 +1,56 @@
+@main-bg-second: #555555;
+@default-font-color: #333333;
+
+@white-color: lighten(@default-font-color, 100%);
+@gray-40: lighten(@main-bg-second, 40%);
+
+.panel {
+	float: left;
+
+	div.panel-bd {
+		table.dt-complex {
+			tr.ie-header {
+				th {
+					background-color: @main-bg-second;
+				}
+			}
+			tr.ie-second-column {
+				th {
+					background-color: @gray-40;
+				}
+			}
+			tr.subtotal {
+				td {
+					border-top: solid 2px lighten(@main-bg-second, 20%);
+				}
+			}
+			tr.ie-doubled-border-top {
+				td {
+					border-top: double 8px lighten(@main-bg-second, 20%);
+				}
+			}
+			tr td.ie-right {
+				border-right: solid 1px @gray-40;
+			}
+		}
+	}
+}
+section {
+	clear: left;
+}
+section.three-column {
+	.panel {
+		width: 100%;
+	}
+	.pane-left {
+		float: left;
+	}
+	.pane-center {
+		width: 40%;
+		float: left;
+	}
+	.pane-right {
+		float: right;
+		margin-right: 10px;
+	}
+}

@@ -1,0 +1,442 @@
+/***** constants - colors *****/
+@bg-color: #ccc;
+@main-bg: #0058a3;
+@main-bg-second: #555555;
+@default-font-color: #333333;
+
+@white-color: lighten(@default-font-color, 100%);
+@black-color: darken(@default-font-color, 100%);
+@gray-40: lighten(@main-bg-second, 40%);
+
+/***** constants - layout & fonts *****/
+@header-padding: 7px;
+@panel-width: 220px;
+@panel-padding: 8px 10px;
+@bd-font-size: 0.7em;
+
+/***** dom elements *****/
+html, body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: lighten(@bg-color, 10%);
+	padding: 0; margin: 0;
+	color: @default-font-color;
+}
+header {
+	background-color: lighten(@main-bg, 18%);
+	border-bottom: solid 1px lighten(@main-bg, 50%);
+	padding: @header-padding;
+	h1 {
+		font-size: 2em;
+		color: @white-color;
+	}
+}
+section {
+	div.hd {
+		background-color: @main-bg;
+		color: @white-color;
+		padding: @header-padding;
+	}
+	div.bd {
+		padding: 10px 0;
+	}
+	div.stretch {
+		table {
+			width: 100%;
+			tr td {
+				background-color: lighten(@main-bg-second, 55%);
+				padding: 12px;
+				font-size: @bd-font-size;
+				border: solid 10px #fff;
+				&:first-child {
+					border-left: 0px;
+				}
+				&:last-child {
+					border-right: 0px;
+				}
+			}
+		}
+	}
+	.common-pane(@width: 25%) {
+		margin: 0;
+		display: inline-block;
+		width: @width;
+	}
+	.pane-left {
+		.common-pane;
+	}
+	.pane-center {
+		.common-pane(42%);
+	}
+	.pane-right {
+		.common-pane(33%);
+	}
+}
+section.sub-section {
+	div.hd {
+		text-transform: uppercase;
+		font-size: 0.68em;
+		font-weight: bold;
+	}
+}
+
+/***** classes *****/
+/* header */
+.header-top {
+	width: 100%;
+	height: 2px;
+	background-color: lighten(@main-bg, 18%);
+}
+.body-wrapper {
+	width: 945px;
+	padding: 0 10px .5em 10px;
+	margin: 0 auto;
+	background-color: @white-color;
+}
+.panel {
+	margin: 0 7px;
+	div.panel-hd {
+		background-color: @main-bg;
+		padding: @panel-padding;
+		font-size: 0.7em;
+		color: @white-color;
+		text-transform: uppercase;
+		border-bottom: solid 1px @white-color;
+	}
+	div.panel-bd {
+		padding: 12px 10px;
+		font-size: @bd-font-size;
+		background-color: lighten(@main-bg-second, 52%);
+		line-height: 140%;
+		@dark-gray: darken(@main-bg-second, 20%);
+		margin-bottom: 10px;
+
+		nav ul {
+			font-weight: bold;
+			list-style: none;
+			color: @dark-gray;
+			li {
+				padding: 5px 0;
+			}
+			ul li {
+				&:first-child {
+					border-top: solid 1px lighten(@main-bg-second, 45%);
+					margin-top: 0.3em;
+				}
+				padding-left: 1em;
+				border-bottom: solid 1px lighten(@main-bg-second, 45%);
+			}
+		}
+		div.list {
+			font-weight: bold;
+			margin-top: 1em;
+			font-size: 1.1em;
+			color: @dark-gray;
+			ul, ol {
+				list-style: square;
+				margin: 0.5em 0 0 2.8em;
+				font-size: 0.9em;
+				li {
+					line-height: 1.6em;
+				}
+			}
+			ol {
+				list-style: decimal;
+			}
+		}
+		.dt-common {
+			tr td {
+				padding: .2em .8em;
+				border-bottom: solid 1px @gray-40;
+				&:first-child {
+					font-weight: bold;
+				}
+				&:last-child {
+					text-align: right;
+				}
+			}
+		}
+		table.dt-simple {
+			width: 100%;
+			border: solid 1px lighten(@main-bg-second, 30%);
+			background-color: lighten(@main-bg-second, 60%);
+			.dt-common;
+		}
+		table.dt-complex {
+			width: 100%;
+			margin: 1em 0 0 0;
+			.dt-common;
+			tr {
+				&:first-child {
+					background-color: @main-bg-second;
+
+					th {
+						padding: .5em 1em;
+						text-align: left;
+						text-transform: uppercase;
+						color: @white-color;
+						font-weight: normal;
+						&:first-child {
+							border-left: solid 1px @main-bg-second;
+						}
+						&:last-child {
+							border-right: solid 1px @main-bg-second;
+						}
+					}
+				}
+				&:nth-child(2) {
+					background-color: @gray-40;
+
+					th {
+						padding: .5em 0.8em;
+						text-align: left;
+						border-bottom: solid 2px lighten(@main-bg-second, 20%);
+
+						&:last-child {
+							text-align: right;
+							border-right: solid 1px @gray-40;
+						}
+						&:first-child {
+							border-left: solid 1px @gray-40;
+						}
+					}
+				}
+				td {
+					background-color: @white-color;
+				}
+				td:first-child {
+					border-left: solid 1px @gray-40;
+				}
+				td:last-child {
+					border-right: solid 1px @gray-40;
+				}
+				&:nth-child(2n) {
+					td {
+						background-color: lighten(@main-bg-second, 60%);
+					}
+				}
+				&:last-child {
+					td {
+						font-weight: bold;
+						text-transform: uppercase;
+						border-top: double 8px lighten(@main-bg-second, 20%);
+						background-color: lighten(@main-bg-second, 60%);
+					}
+				}
+			}
+			tr.subtotal {
+				border-top: solid 2px lighten(@main-bg-second, 20%);
+				font-weight: bold;
+			}
+		}
+		fieldset {
+			border: solid 1px lighten(@main-bg, 10%);
+			padding: 1em;
+			background-color: lighten(@main-bg-second, 60%);
+			font-weight: bold;
+			margin-top: 1em;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			legend {
+				border: solid 1px lighten(@main-bg, 20%);
+				background-color: @white-color;
+				padding: .5em;
+				text-transform: uppercase;
+				font-weight: normal;
+				font-size: .9em;
+
+				&:first-letter {
+					font-size: 125%;
+				}
+			}
+			form {
+				padding: 0.3em;
+
+				.inputs {
+					line-height: 3em;
+				}
+
+				input[type=text], input[type=password] {
+					width: 160px;
+				}
+				label {
+					font-weight: normal;
+					display: inline-block;
+					width: 70px;
+					text-align: right;
+				}
+			}
+			p {
+				font-weight: normal;
+				margin-bottom: 1em;
+			}
+		}
+		article {
+			h2 {
+				font-size: 2.2em;
+				line-height: 1.1em;
+			}
+			h3 {
+				font-size: 1.5em;
+				color: @black-color;
+				padding: 0.4em 0;
+			}
+			h4 {
+				text-transform: uppercase;
+				font-size: 1.1em;
+			}
+			h5 {
+				margin: 1em 0 .5em 0;
+				font-size: 1.1em;
+			}
+			h6 {
+				margin: 1em 0 .5em 0;
+				text-transform: uppercase;
+			}
+			p.location {
+				border-top: dotted 1px lighten(@main-bg, 10%);
+				border-bottom: dotted 1px lighten(@main-bg, 10%);
+				padding: .4em 0;
+				margin: .8em 0;
+				color: lighten(@main-bg-second, 15%);
+				font-size: .9em;
+
+				text-transform: uppercase;
+				span {
+					font-size: 1.2em;
+				}
+			}
+			p {
+				img {
+					width: 60px; height: 60px;
+					border: solid 1px lighten(@main-bg-second, 30%);
+					float: left;
+					padding: 5px;
+					background-color: @white-color;
+					margin: 0 10px 5px 0;
+				}
+				a {
+					text-decoration: none;
+					color: @black-color;
+					font-weight: bold;
+				}
+			}
+		}
+		article.style-b {
+			h3 {
+				font-weight: normal;
+				font-size: 1.8em;
+				color: @default-font-color;
+				padding: .8em 0 .2em 0;
+			}
+			h3.strong {
+				font-weight: bold;
+				padding: .2em 0 .4em 0;
+				font-size: 1.6em;
+			}
+		}
+	}
+	div.first {
+		margin-bottom: 4px;
+	}
+	nav.panel-bd {
+		font-size: 0.7em;
+		font-weight: bold;
+		ul {
+			li {
+				background-color: @gray-40;
+				border-bottom: solid 1px lighten(@main-bg-second, 50%);
+				a {
+					text-decoration: none;
+					text-transform: uppercase;
+					width: 94%;
+					padding: 3% 4%;
+					display: inline-block;
+					color: @black-color;
+				}
+				ul li {
+					background-color: lighten(@main-bg-second, 60%);
+				}
+			}
+			li.selected {
+				background-color: @main-bg-second;
+				a {
+					color: @white-color;
+				}
+				ul li {
+					border-bottom: solid 1px @white-color;
+					a {
+						color: @black-color;
+						text-transform: capitalize;
+						font-weight: bold;
+						text-indent: 2em;
+					}
+				}
+			}
+		}
+	}
+	blockquote {
+		border-left: solid 4px lighten(@main-bg-second, 45%);
+		padding: 0 0 0 1em;
+		margin: .5em 0;
+		font-size: 1.2em;
+		font-family: "MS Serif", "New York", serif;
+		i {
+			display: block;
+			font-size: 0.9em;
+			margin: 1.5em 0 0 0;
+		}
+	}
+}
+section.three-column {
+	div.bd {
+		padding: 0;
+	}
+	.panel {
+		margin: 0;
+		padding: 5px 10px 8px 8px;
+	}
+	.pane-left, .pane-right, .pane-center {
+		vertical-align: top;
+	}
+	.pane-left {
+		.panel {
+			padding-left: 0;
+			.panel-hd {
+				font-weight: bold;
+			}
+		}
+	}
+	.pane-right {
+		.panel {
+			padding-right: 0;
+			.panel-hd {
+				font-weight: bold;
+			}
+		}
+	}
+	.pane-center .panel-hd {
+		font-weight: bold;
+	}
+}
+footer {
+	background-color: @main-bg-second;
+	color: lighten(@main-bg-second, 45%);
+	padding: 1em;
+	font-size: 0.7em;
+}
+
+/***** commonly used classes *****/
+.panel-fw { /* fw stands for fixed-width */
+	width: @panel-width;
+	display: inline-block;
+	vertical-align: top;
+	&:first-child {
+		margin-left: 0;
+	}
+}
+.center {
+	text-align: center;
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Using Less.js Example with HTML5/CSS3 - by Young K. Park</title>
+
+		<link rel="stylesheet" type="text/css" href="css/3rdparty/html5reset.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.min.css">
+
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<link rel="stylesheet" type="text/css" href="css/ie-fallback.min.css">
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<link rel="stylesheet" type="text/css" href="css/ie7-fallback.min.css">
+		<![endif]-->
+	</head>
+	<body>
+		<div class="header-top">&nbsp;</div>
+		<div class="body-wrapper">
+			<header>
+				<h1>CSS Challenge using Less and HTML5/CSS Pseudo Classes</h1>
+			</header>
+			<section>
+				<div class="hd">
+					Images Prohibited
+				</div>
+				<div class="bd">
+
+					<div class="panel panel-fw">
+						<div class="panel-hd">
+							The Task
+						</div>
+						<div class="panel-bd">
+							Code this image into HTML and CSS.
+						</div>
+					</div>
+
+					<div class="panel panel-fw">
+						<div class="panel-hd">
+							Basis
+						</div>
+						<div class="panel-bd">
+							No extra fluff is needed. The final will be judged on how closely it matches this image
+							and how efficiently it is done. We will look at the final product in FireFox, Chrome, and
+							everybody's favorite- Internet Explorer.
+						</div>
+					</div>
+
+					<div class="panel panel-fw">
+						<div class="panel-hd">
+							Hint
+						</div>
+						<div class="panel-bd">
+							<strike>No</strike> images were killed with the creation of the CSS file.
+						</div>
+					</div>
+				</div><!-- end of .bd -->
+			</section>
+			<section class="sub-section">
+				<div class="hd">
+					Column Challenge
+				</div>
+				<div class="bd stretch">
+					<table>
+						<tr>
+							<td><span>He</span></td>
+							<td><span>might</span></td>
+							<td><span>just</span></td>
+							<td><span>go</span></td>
+							<td><span>all</span></td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td><span>the</span></td>
+							<td><span>way!</span></td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section class="three-column">
+				<div class="bd">
+					<div class="pane-left">
+						<div class="panel">
+							<div class="panel-hd">
+								Section Menu
+							</div>
+							<nav class="panel-bd">
+								<ul>
+									<li class="selected">
+										<a href="#menu1">Menu 1</a>
+										<ul>
+											<li><a href="#submenu1">Submenu 1</a></li>
+											<li><a href="#submenu2">Submenu 2</a></li>
+											<li><a href="#submenu3">Submenu 3</a></li>
+											<li><a href="#submenu4">Submenu 4</a></li>
+											<li><a href="#submenu5">Submenu 5</a></li>
+										</ul>
+									</li>
+									<li><a href="#menu2">Menu 2</a></li>
+									<li><a href="#menu3">Menu 3</a></li>
+									<li><a href="#menu4">Menu 4</a></li>
+								</ul>
+							</nav>
+						</div><!-- end of panel -->
+						<div class="panel">
+							<div class="panel-hd">
+								List Items
+							</div>
+							<div class="panel-bd">
+								We are going after a $1 trillion market.
+								<nav>
+									<ul>
+										<li>
+											A Menu
+											<ul>
+												<li>Item 1</li>
+												<li>Item 2</li>
+												<li>Item 3</li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+								<div class="list">
+									An unordered list
+									<ul>
+										<li>Item 1</li>
+										<li>Item 2</li>
+										<li>Item 3</li>
+									</ul>
+								</div>
+								<div class="list">
+									An ordered list
+									<ol>
+										<li>Item 1</li>
+										<li>Item 2</li>
+										<li>Item 3</li>
+									</ol>
+								</div>
+							</div>
+						</div><!-- end of panel -->
+					</div><div class="pane-center">
+						<div class="panel">
+							<div class="panel-hd">
+								Tables
+							</div>
+							<div class="panel-bd">
+								<table summary="Table 1" class="dt-simple">
+									<tr>
+										<td>Lorem ipsum</td>
+										<td>Dolor sit</td>
+										<td>$125.00</td>
+									</tr>
+									<tr>
+										<td>Dolor sit</td>
+										<td>Nostrud exerci</td>
+										<td>$75.00</td>
+									</tr>
+									<tr>
+										<td>Dolor sit</td>
+										<td>Nostrud exerci</td>
+										<td>$75.00</td>
+									</tr>
+								</table>
+								<table summary="Table 2" class="dt-complex">
+									<tr class="ie-header">
+										<th colspan="3">Table Heading</th>
+									</tr>
+									<tr class="ie-second-column">
+										<th>Column 1</th>
+										<th>Column 2</th>
+										<th class="ie-right">Column 3</th>
+									</tr>
+									<tr>
+										<td>Lorem ipsum</td>
+										<td>Dolor sit</td>
+										<td class="ie-right">$125.00</td>
+									</tr>
+									<tr>
+										<td>Dolor sit</td>
+										<td>Nostrud exerci</td>
+										<td class="ie-right">$75.00</td>
+									</tr>
+									<tr>
+										<td>Nostrud exerci</td>
+										<td>Lorem ipsum</td>
+										<td class="ie-right">$200.00</td>
+									</tr>
+									<tr class="subtotal">
+										<td colspan="2">Subtotal</td>
+										<td class="ie-right">$400.00</td>
+									</tr>
+									<tr class="ie-doubled-border-top">
+										<td colspan="2" class="ie-uppercase">Total</td>
+										<td class="ie-right ie-bold">$400.00</td>
+									</tr>
+								</table>
+							</div><!-- end of .panel-bd -->
+						</div><!-- end of panel -->
+						<div class="panel">
+							<div class="panel-hd">
+								Valid Sources
+							</div>
+							<div class="panel-bd">
+								<blockquote>
+									Did you know e-commerce accounts for less than 5% of retail sales?
+
+									<i>Some data from the Census</i>
+								</blockquote>
+							</div>
+						</div><!-- end of .panel -->
+					</div><div class="pane-right">
+						<div class="panel">
+							<div class="panel-hd">
+								Login Forms
+							</div>
+							<div class="panel-bd">
+								<fieldset>
+									<legend>Login</legend>
+
+									Login to complete your purchase.
+									<form>
+										<div class="inputs">
+											<label>Username:</label>
+											<input type="text" />
+											<label>Password:</label>
+											<input type="password" />
+										</div>
+										<div class="center">
+											<button type="submit">Login</button>
+										</div>
+									</form>
+								</fieldset>
+
+								<fieldset>
+									<legend>Register</legend>
+									<p>
+										If you do not already have an account, please create a new account to register.
+									</p>
+									<div>
+										<button type="submit">Create Account</button>
+									</div>
+								</fieldset>
+							</div>
+						</div><!-- end of .panel -->
+						<div class="panel">
+							<div class="panel-hd">
+								Articles
+							</div>
+							<div class="panel-bd first">
+								<article>
+									<h3>Lorem Ipsum</h3>
+									<h4>Get it now!</h4>
+									<p class="location">
+										<span>P</span>alo <span>A</span>lto, <span>C</span>A &mdash; <span>T</span>uesday, <span>M</span>arch 2010
+									</p>
+									<p>
+										<img src="http://www.gravatar.com/avatar/e7802864373da988d8c6fe638f09d0e2">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut turpis risus, id bibendum dui. Vivamus dapibus fermentum dolor commodo laoreet. Fusce congue blandit orci, sed blandit tortor feugiat eget. Fusce tellus lorem, congue eget placerat et, facilisis eget lectus. Quisque mauris metus, eleifend ut consequat.
+										<a href="#visitsite">Visit site.</a>
+									</p>
+								</article>
+							</div>
+							<div class="panel-bd">
+								<article class="style-b">
+									<h2>Last-Minute Shopping Help</h2>
+									<h3>Shopping Help is great</h3>
+									<h3 class="strong">Getting it now is better</h3>
+									<h4>We will, We will, Rock you</h4>
+									<p class="location">
+										Menlo Park, CA &mdash; Monday, March 8 2010
+									</p>
+									<p>
+										<img src="http://www.gravatar.com/avatar/e7802864373da988d8c6fe638f09d0e2">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut turpis risus, id bibendum dui. Vivamus dapibus fermentum dolor commodo laoreet. Fusce congue blandit orci, sed blandit tortor feugiat eget. Fusce tellus lorem, congue eget placerat et, facilisis eget lectus. Quisque mauris metus, eleifend ut consequat.
+										<a href="#visitsite">Visit site.</a>
+									</p>
+									<h5>Heading 5</h5>
+									<p>
+										Duis non mi vel enim aliquam tristique. Donec laoreet aliquam neque, non viverra magna ornare sit amet.
+									</p>
+									<h6>Heading 6</h6>
+									<p>
+										Duis non mi vel enim aliquam tristique. Donec laoreet.
+									</p>
+								</article>
+							</div>
+						</div><!-- end of .panel -->
+					</div>
+				</div><!-- end of .bd -->
+			</section>
+		</div>
+		<footer>
+			Thanks!
+		</footer>
+	</body>
+</html>

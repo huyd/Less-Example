@@ -1,0 +1,35 @@
+.panel {
+  float: left;
+}
+.panel div.panel-bd table.dt-complex tr.ie-header th {
+  background-color: #555555;
+}
+.panel div.panel-bd table.dt-complex tr.ie-second-column th {
+  background-color: #bbbbbb;
+}
+.panel div.panel-bd table.dt-complex tr.subtotal td {
+  border-top: solid 2px #888888;
+}
+.panel div.panel-bd table.dt-complex tr.ie-doubled-border-top td {
+  border-top: double 8px #888888;
+}
+.panel div.panel-bd table.dt-complex tr td.ie-right {
+  border-right: solid 1px #bbbbbb;
+}
+section {
+  clear: left;
+}
+section.three-column .panel {
+  width: 100%;
+}
+section.three-column .pane-left {
+  float: left;
+}
+section.three-column .pane-center {
+  width: 40%;
+  float: left;
+}
+section.three-column .pane-right {
+  float: right;
+  margin-right: 10px;
+}
