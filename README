@@ -9,8 +9,8 @@ A Complete HTML 5 + CSS 3 Solution with Customizable Color Theme
 
 DEMO: http://prototype.youngkeunpark.com/2011/less_example/
 
-* My Goal *
-===========
+My Goal
+=======
 
 # CSS: My goal is to make CSS more manageable using Less.js (a Dynamic Stylesheet
   Language - http://lesscss.org/) so that in case customer wants to have different color theme,
