@@ -1,47 +1,50 @@
+================================================================
+A Complete HTML 5 + CSS 3 Solution with Customizable Color Theme
+================================================================
+
 ***********************************************************************
 * by Young K. Park (email: youngkeunpark@gmail.com)                   *
-* A Complete HTML 5 + CSS 3 Solution with Customizable Color Theme ****
 * Date: Oct. 22, 2011 *************************************************
 ***********************************************************************
 
 DEMO: http://prototype.youngkeunpark.com/2011/less_example/
 
-***********
 * My Goal *
-***********
+===========
+
 # CSS: My goal is to make CSS more manageable using Less.js (a Dynamic Stylesheet
   Language - http://lesscss.org/) so that in case customer wants to have different color theme,
   we can easily change the constant variables to switch colors for them.
 # HTML5: Use HTML5 layout elements to have better markup for the latest browsers. However,
   to make same look and feel for older browsers. I've Polyfilled It! (http://code.google.com/p/html5shiv/)
 
-**************************
 * Implementation Details *
-**************************
+==========================
+
 # Makefile is provided to compile .less using Less Compiler (lessc). we could just
   use less.js to use .less files, but js runs on client-side and it is better to
   use minified (compressed) version of the compiled .css for production use.
 # In order to run makefile, you need to have **lessc** and **YUI Compressor**.
 # You must run "make less" and then run "make minify" to get the final minified version.
 
-*************
 * Polyfills *
-*************
+=============
+
 # Selectivizr.js used to polyfill CSS 3 Pseudo Class (jQuery used to support this library).
 # Less.js used for dynamic stylesheet language.
 # Html5Shiv used to reset HTML 5 elements.
 
-********
 * Test *
-********
+========
+
 # Cross Browser Test is done using:
 -- Google Chrome 14.0.835.202
 -- FireFox 7.0.1
 -- Internet Explorer 7, 8, 9
 
-*******************
 * To Change Color *
-*******************
+===================
+
 # To change color, open styles.less and change @main-bg or @main-bg-second to different colors.
 # To apply those changed colors, you need to run "make less" & "make minify" under root folder.
 # You need to change lessc and YUI Compressor location for your environment (in Makefile).
